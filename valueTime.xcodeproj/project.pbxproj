@@ -14,6 +14,7 @@
 		D95EA1521CB1F8D7005BECDE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D95EA1501CB1F8D7005BECDE /* LaunchScreen.storyboard */; };
 		D95EA15D1CB1F8D7005BECDE /* valueTimeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D95EA15C1CB1F8D7005BECDE /* valueTimeTests.swift */; };
 		D95EA1681CB1F8D8005BECDE /* valueTimeUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D95EA1671CB1F8D8005BECDE /* valueTimeUITests.swift */; };
+		D9C7611D1CB2A51C00833EE8 /* msg.wav in Resources */ = {isa = PBXBuildFile; fileRef = D9C7611C1CB2A51C00833EE8 /* msg.wav */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +48,7 @@
 		D95EA1631CB1F8D8005BECDE /* valueTimeUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = valueTimeUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		D95EA1671CB1F8D8005BECDE /* valueTimeUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = valueTimeUITests.swift; sourceTree = "<group>"; };
 		D95EA1691CB1F8D8005BECDE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D9C7611C1CB2A51C00833EE8 /* msg.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = msg.wav; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,6 +99,7 @@
 		D95EA1461CB1F8D7005BECDE /* valueTime */ = {
 			isa = PBXGroup;
 			children = (
+				D9C7611A1CB2A4A700833EE8 /* resources */,
 				D95EA1471CB1F8D7005BECDE /* AppDelegate.swift */,
 				D95EA1491CB1F8D7005BECDE /* ViewController.swift */,
 				D95EA14B1CB1F8D7005BECDE /* Main.storyboard */,
@@ -123,6 +126,22 @@
 				D95EA1691CB1F8D8005BECDE /* Info.plist */,
 			);
 			path = valueTimeUITests;
+			sourceTree = "<group>";
+		};
+		D9C7611A1CB2A4A700833EE8 /* resources */ = {
+			isa = PBXGroup;
+			children = (
+				D9C7611B1CB2A4B800833EE8 /* audio */,
+			);
+			name = resources;
+			sourceTree = "<group>";
+		};
+		D9C7611B1CB2A4B800833EE8 /* audio */ = {
+			isa = PBXGroup;
+			children = (
+				D9C7611C1CB2A51C00833EE8 /* msg.wav */,
+			);
+			name = audio;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -234,6 +253,7 @@
 			files = (
 				D95EA1521CB1F8D7005BECDE /* LaunchScreen.storyboard in Resources */,
 				D95EA14F1CB1F8D7005BECDE /* Assets.xcassets in Resources */,
+				D9C7611D1CB2A51C00833EE8 /* msg.wav in Resources */,
 				D95EA14D1CB1F8D7005BECDE /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -485,6 +505,7 @@
 				D95EA16E1CB1F8D8005BECDE /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		D95EA16F1CB1F8D8005BECDE /* Build configuration list for PBXNativeTarget "valueTimeTests" */ = {
 			isa = XCConfigurationList;
@@ -493,6 +514,7 @@
 				D95EA1711CB1F8D8005BECDE /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		D95EA1721CB1F8D8005BECDE /* Build configuration list for PBXNativeTarget "valueTimeUITests" */ = {
 			isa = XCConfigurationList;
@@ -501,6 +523,7 @@
 				D95EA1741CB1F8D8005BECDE /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
