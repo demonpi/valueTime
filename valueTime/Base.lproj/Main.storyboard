@@ -17,11 +17,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dO1-bW-peO">
-                                <rect key="frame" x="260" y="442" width="80" height="60"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="40"/>
-                                <state key="normal" title="start"/>
-                            </button>
                             <stackView opaque="NO" contentMode="scaleToFill" alignment="firstBaseline" translatesAutoresizingMaskIntoConstraints="NO" id="oOs-ht-7pW">
                                 <rect key="frame" x="241" y="140" width="119" height="72"/>
                                 <subviews>
@@ -39,19 +34,46 @@
                                     </label>
                                 </subviews>
                             </stackView>
+                            <stackView opaque="NO" contentMode="scaleToFill" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="W7S-Pt-No0">
+                                <rect key="frame" x="211" y="520" width="178" height="60"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dO1-bW-peO">
+                                        <rect key="frame" x="0.0" y="0.0" width="80" height="60"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="40"/>
+                                        <state key="normal" title="start"/>
+                                        <connections>
+                                            <action selector="state:" destination="BYZ-38-t0r" eventType="touchUpInside" id="YnA-Ev-KHV"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VTz-Qv-1uC">
+                                        <rect key="frame" x="100" y="0.0" width="78" height="60"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="40"/>
+                                        <state key="normal" title="stop">
+                                            <color key="titleColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="state:" destination="BYZ-38-t0r" eventType="touchUpInside" id="wJV-Pv-P4s"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="oOs-ht-7pW" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="120" id="0Aw-tU-bnP"/>
-                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="dO1-bW-peO" secondAttribute="bottom" constant="98" id="7uA-KJ-cdm"/>
-                            <constraint firstItem="dO1-bW-peO" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="K6c-pp-Mjf"/>
+                            <constraint firstItem="W7S-Pt-No0" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="0Kv-hG-v9x"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="W7S-Pt-No0" secondAttribute="bottom" constant="20" id="8ym-av-yf3"/>
                             <constraint firstItem="oOs-ht-7pW" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="kPE-4Y-peC"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="timeLabel" destination="An1-9J-FDc" id="bXJ-QE-KbV"/>
+                        <outlet property="timeStack" destination="oOs-ht-7pW" id="fEN-Ws-D4W"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="243" y="339"/>
+            <point key="canvasLocation" x="-77" y="329"/>
         </scene>
     </scenes>
 </document>
