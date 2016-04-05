@@ -37,13 +37,13 @@ class ViewController: UIViewController {
     @IBAction func timeValue(sender: UIDatePicker) {
         leftTime = Int(sender.countDownDuration)
         print(String(leftTime)+"秒")
-        timeLabel.text = String(leftTime/60) + ":00"
+        timeLabel.text = String(leftTime/60) + "分0秒"
     }
     
     //测试按键，在删除时要记得删除关联
     @IBAction func state(sender: UIButton) {
-        let digit = sender.currentTitle!
-        print("digit = \(digit)")
+        let button = sender.currentTitle!
+        print("\(button)")
     }
     
     //点击开始按键的响应函数
@@ -70,7 +70,8 @@ class ViewController: UIViewController {
         let tempMin = leftTime / 60
         let tempSec = leftTime % 60
         
-        self.timeLabel.text = String(tempMin) + ":" + String(tempSec)
+        //label显示剩余时间
+        self.timeLabel.text = String(tempMin) + "分" + String(tempSec) + "秒"
         
         if leftTime <= 0{
             //提示框
@@ -106,9 +107,12 @@ class ViewController: UIViewController {
         startButton.enabled = true
         
         leftTime = Int(timePicker.countDownDuration)
-        timeLabel.text = String(leftTime/60) + ":00"
+        timeLabel.text = String(leftTime/60) + "分0秒"
     }
     
+    func reduceLeftTime(t:Int){
+        leftTime -= t
+    }
 
 }
 

@@ -213,6 +213,11 @@
 					D95EA1431CB1F8D7005BECDE = {
 						CreatedOnToolsVersion = 7.3;
 						DevelopmentTeam = C8HEPF6Q9M;
+						SystemCapabilities = {
+							com.apple.BackgroundModes = {
+								enabled = 1;
+							};
+						};
 					};
 					D95EA1571CB1F8D7005BECDE = {
 						CreatedOnToolsVersion = 7.3;
