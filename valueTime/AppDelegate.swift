@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import AVFoundation
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -16,6 +17,15 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         // Override point for customization after application launch.
+        // 会话类型，这个会覆盖所有其他音频
+        let audioSession = AVAudioSession.sharedInstance()
+        do {
+            try audioSession.setCategory(AVAudioSessionCategoryPlayback)
+            try audioSession.setActive(true)
+        }
+        catch{
+            print(error)
+        }
         return true
     }
 
@@ -27,6 +37,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func applicationDidEnterBackground(application: UIApplication) {
         // Use this method to release shared resources, save user data, invalidate timers, and store enough application state information to restore your application to its current state in case it is terminated later.
         // If your application supports background execution, this method is called instead of applicationWillTerminate: when the user quits.
+        //注册后台任务
+        application.beginBackgroundTaskWithExpirationHandler(nil)
+        //记录进入后台时间
         tempDate = NSDate()
         print(tempDate)
     }
@@ -38,6 +51,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         print(result.second)
         
+        //不需要了后台可以运行
         let tempViewController = self.window?.rootViewController as! ViewController
         tempViewController.reduceLeftTime(result.second)
     }
