@@ -52,8 +52,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         print(result.second)
         
         //不需要了后台可以运行
-        let tempViewController = self.window?.rootViewController as! ViewController
-        tempViewController.reduceLeftTime(result.second)
+//        let tempViewController = self.window?.rootViewController as! ViewController
+//        tempViewController.reduceLeftTime(result.second)
     }
 
     func applicationDidBecomeActive(application: UIApplication) {
