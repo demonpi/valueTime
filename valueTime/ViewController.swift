@@ -37,6 +37,8 @@ class ViewController: UIViewController {
             print(error)
         }
         
+        initTickDown()
+        
     }
 
     override func didReceiveMemoryWarning() {
@@ -65,8 +67,10 @@ class ViewController: UIViewController {
         audioPlayer?.numberOfLoops = -1
         
         isStart = true
-        timePicker.enabled = false
-        startButton.enabled = false
+        timeLabel.hidden = false
+        timePicker.hidden = true
+        startButton.hidden = true
+        stopButton.hidden = false
         
         timer = NSTimer.scheduledTimerWithTimeInterval(NSTimeInterval(1), target: self, selector: #selector(ViewController.tickDown), userInfo: nil, repeats: true)
     }
@@ -82,7 +86,6 @@ class ViewController: UIViewController {
     {
         leftTime -= 1
         print(leftTime)
-        self.timePicker.countDownDuration = NSTimeInterval(leftTime)
         
         let tempMin = leftTime / 60
         let tempSec = leftTime % 60
@@ -121,8 +124,13 @@ class ViewController: UIViewController {
             timer.invalidate()
         }
         isStart = false
-        timePicker.enabled = true
-        startButton.enabled = true
+
+        leftTime = 1500
+        timePicker.countDownDuration = NSTimeInterval(leftTime)
+        timePicker.hidden = false
+        timeLabel.hidden = true
+        startButton.hidden = false
+        stopButton.hidden = true
         
         leftTime = Int(timePicker.countDownDuration)
         timeLabel.text = String(leftTime/60) + "分0秒"

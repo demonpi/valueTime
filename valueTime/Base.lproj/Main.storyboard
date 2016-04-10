@@ -18,33 +18,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="W7S-Pt-No0">
-                                <rect key="frame" x="211" y="520" width="178" height="60"/>
-                                <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dO1-bW-peO">
-                                        <rect key="frame" x="0.0" y="0.0" width="80" height="60"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="40"/>
-                                        <state key="normal" title="start"/>
-                                        <connections>
-                                            <action selector="startClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="BgC-yX-Dir"/>
-                                            <action selector="state:" destination="BYZ-38-t0r" eventType="touchUpInside" id="YnA-Ev-KHV"/>
-                                        </connections>
-                                    </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VTz-Qv-1uC">
-                                        <rect key="frame" x="100" y="0.0" width="78" height="60"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="40"/>
-                                        <state key="normal" title="stop">
-                                            <color key="titleColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                        </state>
-                                        <connections>
-                                            <action selector="state:" destination="BYZ-38-t0r" eventType="touchUpInside" id="wJV-Pv-P4s"/>
-                                            <action selector="stopClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ijS-C6-uX6"/>
-                                        </connections>
-                                    </button>
-                                </subviews>
-                            </stackView>
-                            <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="countDownTimer" countDownDuration="1500" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="kTa-4R-Kqf">
-                                <rect key="frame" x="20" y="28" width="560" height="216"/>
+                            <datePicker hidden="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="countDownTimer" countDownDuration="1500" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="kTa-4R-Kqf">
+                                <rect key="frame" x="20" y="108" width="560" height="216"/>
                                 <date key="date" timeIntervalSinceReferenceDate="481459179.20876598">
                                     <!--2016-04-04 10:39:39 +0000-->
                                 </date>
@@ -52,8 +27,28 @@
                                     <action selector="timeValue:" destination="BYZ-38-t0r" eventType="valueChanged" id="X8B-G8-GKK"/>
                                 </connections>
                             </datePicker>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dO1-bW-peO">
+                                <rect key="frame" x="260" y="520" width="80" height="60"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="40"/>
+                                <state key="normal" title="start"/>
+                                <connections>
+                                    <action selector="startClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="BgC-yX-Dir"/>
+                                    <action selector="state:" destination="BYZ-38-t0r" eventType="touchUpInside" id="YnA-Ev-KHV"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VTz-Qv-1uC">
+                                <rect key="frame" x="261" y="520" width="78" height="60"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="40"/>
+                                <state key="normal" title="stop">
+                                    <color key="titleColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="state:" destination="BYZ-38-t0r" eventType="touchUpInside" id="wJV-Pv-P4s"/>
+                                    <action selector="stopClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ijS-C6-uX6"/>
+                                </connections>
+                            </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="25分0秒" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LZC-wR-bWj">
-                                <rect key="frame" x="224" y="276" width="152" height="48"/>
+                                <rect key="frame" x="224" y="192" width="152" height="48"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="40"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
@@ -61,13 +56,15 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="W7S-Pt-No0" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="0Kv-hG-v9x"/>
-                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="W7S-Pt-No0" secondAttribute="bottom" constant="20" id="8ym-av-yf3"/>
-                            <constraint firstItem="LZC-wR-bWj" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="JY8-vy-2pB"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="VTz-Qv-1uC" secondAttribute="bottom" constant="20" id="BPM-0d-7qo"/>
+                            <constraint firstItem="kTa-4R-Kqf" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="88" id="Qde-qe-leb"/>
+                            <constraint firstItem="dO1-bW-peO" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="TnD-iK-Hts"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="dO1-bW-peO" secondAttribute="bottom" constant="20" id="Xry-TF-mOn"/>
                             <constraint firstAttribute="leadingMargin" secondItem="kTa-4R-Kqf" secondAttribute="leading" id="ZEl-Jk-kAS"/>
+                            <constraint firstItem="LZC-wR-bWj" firstAttribute="top" secondItem="kTa-4R-Kqf" secondAttribute="bottom" constant="-132" id="b6f-qC-hjB"/>
                             <constraint firstItem="kTa-4R-Kqf" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="ezj-PN-53Z"/>
                             <constraint firstItem="LZC-wR-bWj" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="mVz-Q7-t7A"/>
-                            <constraint firstItem="kTa-4R-Kqf" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="8" id="nZ1-Z6-cU3"/>
+                            <constraint firstItem="VTz-Qv-1uC" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="wQu-yZ-1Ip"/>
                         </constraints>
                     </view>
                     <connections>
